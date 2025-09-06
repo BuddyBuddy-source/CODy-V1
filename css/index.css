@@ -4,7 +4,7 @@ body {
   .hero {
   position: relative;
   min-height: 100vh;
-  background: url('../images/Homebackground.jpeg') no-repeat center center/cover;
+  background: url('/images/Homebackground.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
