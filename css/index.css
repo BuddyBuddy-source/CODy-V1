@@ -3,7 +3,7 @@ body {
 }
 
 .hero{
-  background-image: url('../images/Homebackground.jpg');
+  background: url('../images/Homebackground.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23,5 +23,13 @@ body {
 .Uploadimage{
   margin: 0;
 }
+
+
+.Navbar{
+  background-color: rgb(0, 0, 0);
+  opacity: 0.6;
+
+}
+
 
 
