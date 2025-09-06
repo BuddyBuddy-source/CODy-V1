@@ -4,7 +4,7 @@ body {
     .hero {
       position: relative;
       height: 100vh;
-      background: url('https://buddybuddy-source.github.io/images/Homebackground.jpeg');
+      background: url('/images/Homebackground.jpeg');
       background-repeat: no-repeat;
       background-size: cover;
       display: flex;
