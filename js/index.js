@@ -17,7 +17,7 @@ const feedbackForm = document.getElementById("feedbackForm");
       // Auto-hide after 1 seconds
       setTimeout(() => {
         thankYouAlert.style.display = "none";
-      }, 1000);
+      }, 3000);
     }
   });
 
@@ -43,6 +43,30 @@ const feedbackForm = document.getElementById("feedbackForm");
         const modalEl = document.getElementById('contactModal');
         const modal = bootstrap.Modal.getInstance(modalEl);
         modal.hide(); // auto-close modal
-      }, 1000);
+      }, 3000);
+    }
+  });
+
+
+  //thankyou window
+   const form = document.getElementById("uploadForm");
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault(); // stop default redirect
+    const formData = new FormData(form);
+
+    // send data to Formspree
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      // show thank you modal
+      const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+      thankYouModal.show();
+      form.reset();
+    } else {
+      alert("Something went wrong. Please try again.");
     }
   });
